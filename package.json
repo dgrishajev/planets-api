@@ -1,0 +1,49 @@
+{
+  "name": "planets-api",
+  "version": "1.0.0",
+  "description": "API app for fetching and returning all SW planets",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "precommit": "npm run lint",
+    "lint": "./node_modules/.bin/eslint src",
+    "babel-node": "./node_modules/.bin/babel-node",
+    "start": "./node_modules/.bin/nodemon --exec npm run babel-node -- ./src/index.js",
+    "build": "./node_modules/.bin/babel src -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dgrishajev/planets-api.git"
+  },
+  "keywords": [
+    "javascript",
+    "node",
+    "express",
+    "babel",
+    "api"
+  ],
+  "author": "Dominic Grishajev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dgrishajev/planets-api/issues"
+  },
+  "homepage": "https://github.com/dgrishajev/planets-api#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "http-errors": "^1.7.2",
+    "morgan": "^1.9.1",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.7"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.3",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "eslint": "^5.14.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "husky": "^1.3.1",
+    "nodemon": "^1.18.10"
+  }
+}
